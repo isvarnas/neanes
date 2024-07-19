@@ -122,9 +122,9 @@
               class="neume"
               :neume="QuantitativeNeume.OligonPlusIsonPlusKentemata"
               :fontFamily="pageSetup.neumeDefaultFontFamily"
-              :title="tooltip(neume)"
+              :title= "tooltip(neume)"
             />
-
+            ilias
             <div class="menu down" v-if="showIsonKentemataMenu">
               <div
                 class="menu-item"
