@@ -6920,6 +6920,7 @@ export default class Editor extends Vue {
 .content {
   display: flex;
   flex: 1;
+  flex-direction: row-reverse;
   overflow: auto;
 }
 
