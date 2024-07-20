@@ -122,9 +122,8 @@
               class="neume"
               :neume="QuantitativeNeume.OligonPlusIsonPlusKentemata"
               :fontFamily="pageSetup.neumeDefaultFontFamily"
-              :title= "tooltip(neume)"
+              :title="tooltip(neume)"
             />
-            ilias
             <div class="menu down" v-if="showIsonKentemataMenu">
               <div
                 class="menu-item"
@@ -894,6 +893,8 @@ export default class NeumeSelector extends Vue {
   position: relative;
   height: var(--neume-height);
   width: 100%;
+  color: rgb(15, 15, 214);
+  /* background-color: aqua; */
 }
 
 .menu {

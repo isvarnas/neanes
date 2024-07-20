@@ -33,12 +33,20 @@
       @open-playback-settings="openPlaybackSettingsDialog"
     />
     <div class="content">
-      <NeumeSelector
-        class="neume-selector"
-        :pageSetup="score.pageSetup"
-        :neumeKeyboard="neumeKeyboard"
-        @select-quantitative-neume="addQuantitativeNeume"
-      />
+      <div class="quantitative-neume-container">
+        <div class="quantitative-neume-toolbar">
+          <!-- <label for="switch">Toggle</label>
+          <input type="checkbox" id="switch" class="visually-hidden" /> -->
+          <input title="Text to show" type="checkbox" id="switch" />
+          <label for="switch">Toggle</label>
+        </div>
+        <NeumeSelector
+          class="neume-selector"
+          :pageSetup="score.pageSetup"
+          :neumeKeyboard="neumeKeyboard"
+          @select-quantitative-neume="addQuantitativeNeume"
+        />
+      </div>
       <div class="page-container">
         <Vue3TabsChrome
           class="workspace-tab-container"
@@ -6920,9 +6928,76 @@ export default class Editor extends Vue {
 .content {
   display: flex;
   flex: 1;
-  flex-direction: row-reverse;
+  flex-direction: row;
   overflow: auto;
 }
+
+.quantitative-neume-toolbar {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  /* align-content: center; */
+  /* text-align: center; */
+  vertical-align: top;
+  background-color: lightgray;
+  padding: 0.1rem;
+  /* left: 0; */
+  width: 100%;
+  /* background: #d3d3d3; */
+}
+
+.quantitative-neume-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* when checkbox is checked */
+.content:has(input[type='checkbox']:checked) {
+  flex-direction: row-reverse;
+}
+
+input[type='checkbox'] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 100px;
+  height: 25px;
+  background: #b5b5b5;
+  display: block;
+  border-radius: 20px;
+  position: relative;
+}
+
+label:after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 19px;
+  height: 19px;
+  background: #8e6868;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  background: #b5b5b5;
+}
+
+input:checked + label:after {
+  left: calc(100% - 3px);
+  transform: translateX(-100%);
+}
+/* 
+label:active:after {
+  width: 100px;
+} */
 
 .neume-selector {
   overflow: auto;
