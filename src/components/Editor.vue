@@ -6935,11 +6935,12 @@ export default class Editor extends Vue {
 .quantitative-neume-toolbar {
   display: flex;
   align-items: center;
-  width: 90%;
+  width: 190px;
+  height: 18px;
   border-radius: 0;
   background-color: white;
   margin: 0;
-  padding: 0.9rem 0.9rem 0.9rem 0.9rem;
+  padding: 8px 8px 8px 16px; /* 0.1rem 0.1rem 0.1rem 0.1rem;*/
 }
 
 .quantitative-neume-container {
@@ -6962,7 +6963,7 @@ input[type='checkbox'] {
 label {
   cursor: pointer;
   text-indent: -9999px;
-  width: 10%;
+  width: 160px;
   height: 25px;
   background: #b5b5b5;
   display: block;
