@@ -6934,16 +6934,12 @@ export default class Editor extends Vue {
 
 .quantitative-neume-toolbar {
   display: flex;
-  flex-direction: column-reverse;
   align-items: center;
-  /* align-content: center; */
-  /* text-align: center; */
-  vertical-align: top;
-  background-color: lightgray;
-  padding: 0.1rem;
-  /* left: 0; */
-  width: 100%;
-  /* background: #d3d3d3; */
+  width: 90%;
+  border-radius: 0;
+  background-color: white;
+  margin: 0;
+  padding: 0.9rem 0.9rem 0.9rem 0.9rem;
 }
 
 .quantitative-neume-container {
@@ -6966,12 +6962,12 @@ input[type='checkbox'] {
 label {
   cursor: pointer;
   text-indent: -9999px;
-  width: 100px;
+  width: 10%;
   height: 25px;
   background: #b5b5b5;
   display: block;
   border-radius: 20px;
-  position: relative;
+  position: absolute;
 }
 
 label:after {
@@ -6994,10 +6990,6 @@ input:checked + label:after {
   left: calc(100% - 3px);
   transform: translateX(-100%);
 }
-/* 
-label:active:after {
-  width: 100px;
-} */
 
 .neume-selector {
   overflow: auto;
