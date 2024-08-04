@@ -33,7 +33,7 @@
       @open-playback-settings="openPlaybackSettingsDialog"
     />
     <div class="content">
-      <div class="quantitative-neume-container">
+      <div class="quantitative-neume-container no-print">
         <div class="quantitative-neume-toolbar">
           <!-- <label for="switch">Toggle</label>
           <input type="checkbox" id="switch" class="visually-hidden" /> -->

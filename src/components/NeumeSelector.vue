@@ -893,7 +893,7 @@ export default class NeumeSelector extends Vue {
   position: relative;
   height: var(--neume-height);
   width: 100%;
-  color: rgb(15, 15, 214);
+  color: rgba(0, 0, 0, 0.4);
   /* background-color: aqua; */
 }
 
@@ -921,6 +921,7 @@ export default class NeumeSelector extends Vue {
   user-select: none;
   overflow: hidden;
   position: relative;
+  color: black;
 }
 
 .menu-item:hover {
